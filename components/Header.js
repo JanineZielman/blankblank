@@ -8,7 +8,7 @@ export const Header = ({ navigation,settings}) => {
   console.log(navigation)
   return (
     <div className="header">
-      <div>
+      <div className="logo-text">
         <Link href="/">
           <PrismicText field={settings.data.name}/>
         </Link>
