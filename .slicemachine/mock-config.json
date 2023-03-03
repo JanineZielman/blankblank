@@ -1,0 +1,69 @@
+{
+  "_cts": {
+    "navigation": {
+      "links": {
+        "label": {
+          "config": {
+            "patternType": "HEADING",
+            "blocks": 1
+          }
+        }
+      }
+    },
+    "page": {
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
+    "settings": {
+      "name": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "description": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "newsletterDescription": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "newsletterDisclaimer": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "project": {}
+  },
+  "slices": {
+    "Text": {
+      "default": {
+        "primary": {
+          "text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 4
+            }
+          }
+        }
+      }
+    },
+    "Image": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    }
+  }
+}
