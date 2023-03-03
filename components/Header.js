@@ -16,7 +16,7 @@ export const Header = ({ navigation,settings}) => {
       <div className="links">
         {navigation.data.links.map((item,i) => {
           return(
-            <PrismicLink document={item.link}>
+            <PrismicLink document={item.link} key={`link${i}`}>
               <PrismicText field={item.label}/>
             </PrismicLink>
           )
