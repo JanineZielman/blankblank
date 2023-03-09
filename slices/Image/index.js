@@ -8,10 +8,10 @@ import { PrismicNextImage } from '@prismicio/next'
  * @param { ImageProps }
  */
 const Image = ({ slice }) => {
+  console.log(slice)
   return(
-    <section className='images-section'>
+    <section className='images-section' style={{'backgroundColor': slice.primary.background_color}}>
       {slice.items.map((item,i) => {
-        console.log(item)
         return(
           <div className={`image ${item.size}`}>
             {item.size == 'main' ?

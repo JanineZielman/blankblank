@@ -10,7 +10,15 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "Image",
-      "primary": {},
+      "primary": {
+        "background_color": {
+          "type": "Color",
+          "config": {
+            "label": "Background Color",
+            "placeholder": ""
+          }
+        }
+      },
       "items": {
         "image": {
           "type": "Image",
@@ -29,6 +37,11 @@
                 "name": "full-width",
                 "width": 1920,
                 "height": null
+              },
+              {
+                "name": "full-screen",
+                "width": 1920,
+                "height": 1080
               }
             ]
           }
@@ -41,7 +54,8 @@
             "options": [
               "main",
               "full-height",
-              "full-width"
+              "full-width",
+              "full-screen"
             ]
           }
         },

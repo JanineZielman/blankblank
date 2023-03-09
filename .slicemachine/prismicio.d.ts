@@ -206,6 +206,22 @@ interface SettingsDocumentData {
 export type SettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<SettingsDocumentData>, "settings", Lang>;
 export type AllDocumentTypes = NavigationDocument | PageDocument | ProjectDocument | SettingsDocument;
 /**
+ * Primary content in Image → Primary
+ *
+ */
+interface ImageSliceDefaultPrimary {
+    /**
+     * Background Color field in *Image → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+}
+/**
  * Item in Image → Items
  *
  */
@@ -219,7 +235,7 @@ export interface ImageSliceDefaultItem {
      * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    image: prismicT.ImageField<"full-height" | "full-width">;
+    image: prismicT.ImageField<"full-height" | "full-width" | "full-screen">;
     /**
      * Size field in *Image → Items*
      *
@@ -229,7 +245,7 @@ export interface ImageSliceDefaultItem {
      * - **Documentation**: https://prismic.io/docs/core-concepts/select
      *
      */
-    size: prismicT.SelectField<"main" | "full-height" | "full-width">;
+    size: prismicT.SelectField<"main" | "full-height" | "full-width" | "full-screen">;
     /**
      * Caption field in *Image → Items*
      *
@@ -249,7 +265,7 @@ export interface ImageSliceDefaultItem {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type ImageSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<ImageSliceDefaultItem>>;
+export type ImageSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ImageSliceDefaultPrimary>, Simplify<ImageSliceDefaultItem>>;
 /**
  * Slice variation for *Image*
  *
@@ -308,6 +324,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, ProjectDocumentData, ProjectDocumentDataSlicesSlice, ProjectDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ImageSliceDefaultItem, ImageSliceDefault, ImageSliceVariation, ImageSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, ProjectDocumentData, ProjectDocumentDataSlicesSlice, ProjectDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ImageSliceDefaultPrimary, ImageSliceDefaultItem, ImageSliceDefault, ImageSliceVariation, ImageSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }
