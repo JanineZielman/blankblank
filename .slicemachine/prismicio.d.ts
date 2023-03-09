@@ -219,7 +219,27 @@ export interface ImageSliceDefaultItem {
      * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    image: prismicT.ImageField<never>;
+    image: prismicT.ImageField<"full-height" | "full-width">;
+    /**
+     * Size field in *Image → Items*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image.items[].size
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    size: prismicT.SelectField<"main" | "full-height" | "full-width">;
+    /**
+     * Caption field in *Image → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image.items[].caption
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    caption: prismicT.RichTextField;
 }
 /**
  * Default variation for Image Slice

@@ -19,7 +19,39 @@
             "constraint": {
               "height": 1080
             },
-            "thumbnails": []
+            "thumbnails": [
+              {
+                "name": "full-height",
+                "width": null,
+                "height": 1920
+              },
+              {
+                "name": "full-width",
+                "width": 1920,
+                "height": null
+              }
+            ]
+          }
+        },
+        "size": {
+          "type": "Select",
+          "config": {
+            "label": "Size",
+            "placeholder": "",
+            "options": [
+              "main",
+              "full-height",
+              "full-width"
+            ]
+          }
+        },
+        "caption": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Caption",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
           }
         }
       },

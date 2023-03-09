@@ -13,11 +13,11 @@
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
-                "width": 4480,
-                "height": 4480
+                "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
+                "width": 4000,
+                "height": 4000
               },
-              "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?rect=0%2C0%2C4480%2C4480&w=1080&h=1080",
+              "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?rect=0%2C0%2C4000%2C4000&w=1080&h=1080",
               "width": 1080,
               "height": 1080,
               "edit": {
@@ -28,7 +28,68 @@
                 },
                 "background": "transparent"
               },
-              "thumbnails": {}
+              "thumbnails": {
+                "full-height": {
+                  "origin": {
+                    "id": "full-height",
+                    "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+                    "width": 3168,
+                    "height": 4752
+                  },
+                  "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613?rect=0%2C0%2C3168%2C4752&w=1280&h=1920",
+                  "width": 1280,
+                  "height": 1920,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "background": "transparent"
+                  }
+                },
+                "full-width": {
+                  "origin": {
+                    "id": "full-width",
+                    "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6",
+                    "width": 3212,
+                    "height": 3880
+                  },
+                  "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?rect=0%2C0%2C3212%2C3879&w=1920&h=2319",
+                  "width": 1920,
+                  "height": 2319,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "background": "transparent"
+                  }
+                }
+              }
+            }
+          ],
+          [
+            "size",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "full-height",
+              "type": "Select"
+            }
+          ],
+          [
+            "caption",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Officia et eiusmod cillum exercitation reprehenderit exercitation cupidatat nostrud exercitation do pariatur reprehenderit occaecat aute. Lorem velit fugiat anim labore ullamco excepteur dolor quis. Deserunt excepteur eu pariatur sunt ipsum reprehenderit sunt Lorem ullamco occaecat velit est ullamco nisi."
+                  }
+                }
+              ]
             }
           ]
         ]
