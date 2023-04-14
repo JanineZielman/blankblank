@@ -220,6 +220,16 @@ interface ImageSliceDefaultPrimary {
      *
      */
     background_color: prismicT.ColorField;
+    /**
+     * Columns field in *Image → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image.primary.columns
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    columns: prismicT.SelectField<"1" | "2" | "3" | "4">;
 }
 /**
  * Item in Image → Items

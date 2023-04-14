@@ -17,6 +17,19 @@
             "label": "Background Color",
             "placeholder": ""
           }
+        },
+        "columns": {
+          "type": "Select",
+          "config": {
+            "label": "Columns",
+            "placeholder": "",
+            "options": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          }
         }
       },
       "items": {

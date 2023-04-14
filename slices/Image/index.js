@@ -9,7 +9,7 @@ import { PrismicNextImage } from '@prismicio/next'
  */
 const Image = ({ slice }) => {
   return(
-    <section className='images-section' style={{'backgroundColor': slice.primary.background_color}}>
+    <section className={`images-section columns-${slice.primary.columns}`} style={{'backgroundColor': slice.primary.background_color}}>
       {slice.items.map((item,i) => {
         return(
           <div className={`image ${item.size}`} key={`image${i}`}>
