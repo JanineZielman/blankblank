@@ -13,7 +13,7 @@ const Image = ({ slice }) => {
       {slice.items.map((item,i) => {
         return(
           <div className={`image ${item.size}`} key={`image${i}`}>
-            {item.size == 'main' ?
+            { (item.size == 'main' || item.size == null) ?
               <PrismicNextImage
                 field={item.image} 
                 alt={item.image.alt}
@@ -24,8 +24,8 @@ const Image = ({ slice }) => {
               <PrismicNextImage
                 field={item.image} 
                 alt={item.image.alt}
-                width={item.image[item.size].dimensions.width}
-                height={item.image[item.size].dimensions.height}
+                width={item.image[item.size]?.dimensions.width}
+                height={item.image[item.size]?.dimensions.height}
               />
             }
           </div>
