@@ -110,6 +110,13 @@ $marginL: 10vw;
   }
 }
 
+.drag-container{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+}
+
 .drag{
   height: 20vw;
   width: auto;

@@ -31,16 +31,18 @@ const Index = ({ navigation, settings, home }) => {
         <title>{prismicH.asText(settings.data.name)}</title>
       </Head>
       <div className="container">
-        {home.data.project.map((item, i) => {
-          return(
-            <div className={`drag ${item.position}`} id={`drag${i}`} key={`drag${i}`}>
-              <PrismicLink field={item.link}>
-                <PrismicNextImage field={item.image}/>
-                <PrismicRichText field={item.title}/>
-              </PrismicLink>
-            </div>
-          )
-        })}
+        <div className="drag-container">
+          {home.data.project.map((item, i) => {
+            return(
+              <div className={`drag ${item.position}`} id={`drag${i}`} key={`drag${i}`}>
+                <PrismicLink field={item.link}>
+                  <PrismicNextImage field={item.image}/>
+                  <PrismicRichText field={item.title}/>
+                </PrismicLink>
+              </div>
+            )
+          })}
+        </div>
       </div>
     </Layout>
   );
