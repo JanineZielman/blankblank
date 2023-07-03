@@ -44,7 +44,10 @@
         }
       }
     },
-    "project": {}
+    "project": {},
+    "homepage": {
+      "project": {}
+    }
   },
   "slices": {
     "Text": {

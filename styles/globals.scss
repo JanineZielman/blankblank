@@ -31,6 +31,11 @@ $marginL: 10vw;
   }
 }
 
+.container{
+  padding: 50px 1%;
+  
+}
+
 .text-section{
   max-width: 900px;
   font-size: $p;
@@ -105,3 +110,45 @@ $marginL: 10vw;
   }
 }
 
+.drag{
+  height: 20vw;
+  width: auto;
+  position: absolute;
+  a{
+    color: black;
+  }
+  img{
+    width: auto;
+    height: 100%;
+  }
+  &.left_top{
+    left: 0;
+    top: 0;
+  }
+  &.right_top{
+    left: 50vw;
+    top: 0;
+  }
+  &.left_bottom{
+    left: 0;
+    top: 50vh;
+  }
+  &.right_bottom{
+    left: 50vw;
+    top: 50vh;
+  }
+  p{
+    position: fixed;
+    bottom: 1%;
+    left: 1%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  &:hover{
+    p{
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
