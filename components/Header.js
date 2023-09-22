@@ -5,7 +5,6 @@ import Link from "next/link";
 
 
 export const Header = ({ navigation,settings}) => {
-  console.log(navigation)
   return (
     <div className="header">
       <div className="logo-text">

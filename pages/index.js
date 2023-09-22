@@ -9,7 +9,6 @@ import { Layout } from "../components/Layout";
 
 
 const Index = ({ navigation, settings, home }) => {
-  console.log(home)
   useEffect(() => {
     $( function() {
       const dragItems = document.getElementsByClassName('drag');
