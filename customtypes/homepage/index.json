@@ -42,8 +42,10 @@
                 "placeholder": "",
                 "options": [
                   "left_top",
+                  "middle_top",
                   "right_top",
                   "left_bottom",
+                  "middle_bottom",
                   "right_bottom"
                 ]
               }

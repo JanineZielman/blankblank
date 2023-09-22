@@ -5,7 +5,7 @@
       {
         "type": "heading1",
         "content": {
-          "text": "Moving"
+          "text": "Happened"
         }
       }
     ]
@@ -16,51 +16,53 @@
       {
         "type": "paragraph",
         "content": {
-          "text": "Eu dolore veniam amet do cupidatat Lorem. Nostrud excepteur anim deserunt labore minim sint aliquip in."
+          "text": "Reprehenderit ex cupidatat labore ex anim. Sunt aliqua irure nisi proident adipisicing exercitation sit et commodo."
         }
       }
     ]
   },
-  "profilePicture": {
+  "image": {
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
-      "width": 3199,
-      "height": 3199
+      "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+      "width": 5616,
+      "height": 3744
     },
-    "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?rect=0%2C0%2C3199%2C3199&w=2000&h=2000",
-    "width": 2000,
-    "height": 2000,
+    "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?rect=0%2C398%2C5616%2C2948&w=1200&h=630",
+    "width": 1200,
+    "height": 630,
     "edit": {
       "zoom": 1,
       "crop": {
         "x": 0,
-        "y": 0
+        "y": 398
       },
       "background": "transparent"
     },
     "thumbnails": {}
   },
-  "newsletterDescription": {
-    "__TYPE__": "StructuredTextContent",
+  "footer": {
+    "__TYPE__": "GroupContentType",
     "value": [
       {
-        "type": "paragraph",
-        "content": {
-          "text": "Veniam fugiat dolor consequat velit eiusmod labore consequat aute mollit qui."
-        }
-      }
-    ]
-  },
-  "newsletterDisclaimer": {
-    "__TYPE__": "StructuredTextContent",
-    "value": [
-      {
-        "type": "paragraph",
-        "content": {
-          "text": "Irure sint elit reprehenderit laboris reprehenderit consequat eu eiusmod incididunt excepteur eu voluptate tempor. Qui ut ut excepteur culpa ut veniam deserunt aliquip id adipisicing aliqua fugiat ad."
-        }
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "text",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Aliquip deserunt adipisicing irure occaecat deserunt labore amet est nisi eiusmod. Ex minim commodo non nulla esse. Consectetur aute tempor commodo cillum labore quis officia et."
+                  }
+                }
+              ]
+            }
+          ]
+        ]
       }
     ]
   }

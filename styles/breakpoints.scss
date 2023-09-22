@@ -1,0 +1,47 @@
+@media screen and (max-width: 900px) {
+  .header{
+    font-size: 20px;
+    padding: 1% 14px;
+  }
+  .footer{
+    font-size: 14px;
+    padding: 0 14px;
+  }
+  .project-title{
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    left: 14px;
+    font-size: 20px;
+  }
+  
+  .text-section{
+    max-width: 100%;
+    padding: 0 14px;
+    margin-left: 0;
+  }
+  .images-section{
+    &.columns-1{
+      .image{
+        width: 100%;
+      }
+    }
+    
+    &.columns-2{
+      .image{
+        width: 100%;
+      }
+    }
+    
+    &.columns-3{
+      .image{
+        width: 100%;
+      }
+    }
+    &.columns-4{
+      .image{
+        width: 100%;
+      }
+    }
+  }
+}

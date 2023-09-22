@@ -23,33 +23,32 @@
           "single": "paragraph"
         }
       },
-      "profilePicture": {
+      "image": {
         "type": "Image",
         "config": {
-          "label": "Profile Picture",
+          "label": "Image",
           "constraint": {
-            "width": 2000,
-            "height": 2000
+            "width": 1200,
+            "height": 630
           },
           "thumbnails": []
         }
       },
-      "newsletterDescription": {
-        "type": "StructuredText",
+      "footer": {
+        "type": "Group",
         "config": {
-          "label": "Newsletter Description",
-          "placeholder": "Text above the sign up form",
-          "allowTargetBlank": true,
-          "multi": "heading1,paragraph,strong,em,hyperlink,list-item,o-list-item"
-        }
-      },
-      "newsletterDisclaimer": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Newsletter Disclaimer",
-          "placeholder": "Small text below sign up form",
-          "allowTargetBlank": true,
-          "multi": "paragraph,em,strong,hyperlink"
+          "label": "Footer",
+          "fields": {
+            "text": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Text",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            }
+          }
         }
       }
     }

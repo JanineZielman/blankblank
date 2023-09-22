@@ -14,8 +14,8 @@ const Index = ({ navigation, settings, home }) => {
     $( function() {
       const dragItems = document.getElementsByClassName('drag');
       for (let i = 0; i < dragItems.length; i++) { 
-        var random1 = Math.floor(Math.random() * 25);
-        var random2 = Math.floor(Math.random() * 25);
+        var random1 = Math.floor(Math.random() * 20);
+        var random2 = Math.floor(Math.random() * 20);
         $( `#drag${i}` ).draggable();
         document.getElementById(`drag${i}`).style.marginLeft = random1 + 'vw'
         document.getElementById(`drag${i}`).style.marginTop = random2 + 'vh'

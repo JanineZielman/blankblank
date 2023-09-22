@@ -64,7 +64,7 @@ export interface HomepageDocumentDataProjectItem {
      * - **Documentation**: https://prismic.io/docs/core-concepts/select
      *
      */
-    position: prismicT.SelectField<"left_top" | "right_top" | "left_bottom" | "right_bottom">;
+    position: prismicT.SelectField<"left_top" | "middle_top" | "right_top" | "left_bottom" | "middle_bottom" | "right_bottom">;
 }
 /**
  * Homepage document from Prismic
@@ -231,38 +231,43 @@ interface SettingsDocumentData {
      */
     description: prismicT.RichTextField;
     /**
-     * Profile Picture field in *Settings*
+     * Image field in *Settings*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
-     * - **API ID Path**: settings.profilePicture
+     * - **API ID Path**: settings.image
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    profilePicture: prismicT.ImageField<never>;
+    image: prismicT.ImageField<never>;
     /**
-     * Newsletter Description field in *Settings*
+     * Footer field in *Settings*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.footer[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    footer: prismicT.GroupField<Simplify<SettingsDocumentDataFooterItem>>;
+}
+/**
+ * Item in Settings → Footer
+ *
+ */
+export interface SettingsDocumentDataFooterItem {
+    /**
+     * Text field in *Settings → Footer*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: Text above the sign up form
-     * - **API ID Path**: settings.newsletterDescription
-     * - **Tab**: Main
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.footer[].text
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    newsletterDescription: prismicT.RichTextField;
-    /**
-     * Newsletter Disclaimer field in *Settings*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: Small text below sign up form
-     * - **API ID Path**: settings.newsletterDisclaimer
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    newsletterDisclaimer: prismicT.RichTextField;
+    text: prismicT.RichTextField;
 }
 /**
  * Settings document from Prismic
@@ -404,6 +409,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataProjectItem, HomepageDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, ProjectDocumentData, ProjectDocumentDataSlicesSlice, ProjectDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ImageSliceDefaultPrimary, ImageSliceDefaultItem, ImageSliceDefault, ImageSliceVariation, ImageSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataProjectItem, HomepageDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, ProjectDocumentData, ProjectDocumentDataSlicesSlice, ProjectDocument, SettingsDocumentData, SettingsDocumentDataFooterItem, SettingsDocument, AllDocumentTypes, ImageSliceDefaultPrimary, ImageSliceDefaultItem, ImageSliceDefault, ImageSliceVariation, ImageSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }

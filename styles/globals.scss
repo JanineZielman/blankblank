@@ -12,14 +12,19 @@ $h3: 24px;
 $p: 18px;
 $marginL: 10vw;
 
+*{
+  box-sizing: border-box;
+}
+
 .header{
   display: flex;
   justify-content: space-between;
-  width: 98%;
-  margin: 1% 1%;
+  width: 100%;
   font-size: $h3;
   position: fixed;
   top: 0;
+  box-sizing: border-box;
+  padding: 1% 1%;
   a{
     text-decoration: none;
     color: inherit;
@@ -37,11 +42,14 @@ $marginL: 10vw;
 }
 
 .text-section{
-  max-width: 900px;
+  max-width: 65%;
   font-size: $p;
   margin-left: $marginL;
   margin-top: 48px;
   margin-bottom: 48px;
+  p{
+    min-height: $p;
+  }
 }
 
 .project-title{
@@ -132,21 +140,29 @@ $marginL: 10vw;
     left: 0;
     top: 0;
   }
+  &.middle_top{
+    left: 30vw;
+    top: 0;
+  }
   &.right_top{
-    left: 50vw;
+    left: 60vw;
     top: 0;
   }
   &.left_bottom{
     left: 0;
     top: 50vh;
   }
+  &.middle_bottom{
+    left: 30vw;
+    top: 50vh;
+  }
   &.right_bottom{
-    left: 50vw;
+    left: 60vw;
     top: 50vh;
   }
   p{
     position: fixed;
-    bottom: 1%;
+    bottom: 48px;
     left: 1%;
     visibility: hidden;
     opacity: 0;
@@ -157,5 +173,21 @@ $marginL: 10vw;
       visibility: visible;
       opacity: 1;
     }
+  }
+}
+
+.footer{
+  padding: 0 1vw;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: $h3;
+  p{
+    margin: 14px 0;
+  }
+  a{
+    color: black;
   }
 }
