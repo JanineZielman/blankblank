@@ -7,7 +7,7 @@ export const Footer = ({ settings }) => {
     <footer className="footer">
       {settings.data.footer.map((item, i) => {
         return(
-          <div>
+          <div key={`footer${i}`}>
             <PrismicRichText field={item.text}/>
           </div>
         )
