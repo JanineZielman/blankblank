@@ -38,17 +38,16 @@ $marginL: 10vw;
 
 .container{
   padding: 50px 1%;
-  
 }
 
 .text-section{
-  max-width: 65%;
   font-size: $p;
-  margin-left: $marginL;
-  margin-top: 48px;
-  margin-bottom: 48px;
+  padding-left: $marginL;
+  padding-top: 48px;
+  padding-bottom: 48px;
   p{
     min-height: $p;
+    max-width: 65%;
   }
 }
 

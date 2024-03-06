@@ -16,9 +16,10 @@
   }
   
   .text-section{
-    max-width: 100%;
-    padding: 0 14px;
-    margin-left: 0;
+    padding: 24px 14px;
+    p{
+      max-width: 100%;
+    }
   }
   .images-section{
     &.columns-1{
