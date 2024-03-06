@@ -380,6 +380,16 @@ interface TextSliceDefaultPrimary {
      *
      */
     text: prismicT.RichTextField;
+    /**
+     * Background Color field in *Text → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
 }
 /**
  * Default variation for Text Slice
