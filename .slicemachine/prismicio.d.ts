@@ -180,6 +180,17 @@ interface ProjectDocumentData {
      */
     title: prismicT.TitleField;
     /**
+     * Background Color field in *Project*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: project.background_color
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+    /**
      * Slice Zone field in *Project*
      *
      * - **Field Type**: Slice Zone
@@ -296,6 +307,17 @@ interface ImageSliceDefaultPrimary {
      */
     background_color: prismicT.ColorField;
     /**
+     * Fade field in *Image → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: image.primary.fade
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    fade: prismicT.BooleanField;
+    /**
      * Columns field in *Image → Primary*
      *
      * - **Field Type**: Select
@@ -390,6 +412,17 @@ interface TextSliceDefaultPrimary {
      *
      */
     background_color: prismicT.ColorField;
+    /**
+     * Fade field in *Text → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: text.primary.fade
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    fade: prismicT.BooleanField;
 }
 /**
  * Default variation for Text Slice

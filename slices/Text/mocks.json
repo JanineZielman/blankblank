@@ -36,6 +36,10 @@
         "__TYPE__": "FieldContent",
         "value": "#f7a481",
         "type": "Color"
+      },
+      "fade": {
+        "__TYPE__": "BooleanContent",
+        "value": false
       }
     },
     "items": [

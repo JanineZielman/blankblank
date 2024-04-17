@@ -12,6 +12,10 @@
         "__TYPE__": "FieldContent",
         "value": "3",
         "type": "Select"
+      },
+      "fade": {
+        "__TYPE__": "BooleanContent",
+        "value": true
       }
     },
     "items": [

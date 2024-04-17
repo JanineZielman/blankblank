@@ -18,10 +18,12 @@ const Project = ({ project, navigation, settings }) => {
           {prismicH.asText(settings.data.name)}
         </title>
       </Head>
-      <div className="project-title">
-        <PrismicText field={project.data.title}/>
+      <div className="project-page" style={{'backgroundColor': project.data.background_color}}>
+        <div className="project-title">
+          <PrismicText field={project.data.title}/>
+        </div>
+        <SliceZone slices={project.data.slices} components={components} />
       </div>
-      <SliceZone slices={project.data.slices} components={components} />
     </Layout>
   );
 };
