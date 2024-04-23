@@ -40,6 +40,11 @@
       "fade": {
         "__TYPE__": "BooleanContent",
         "value": false
+      },
+      "fade_direction": {
+        "__TYPE__": "FieldContent",
+        "value": "Bottom",
+        "type": "Select"
       }
     },
     "items": [

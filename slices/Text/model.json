@@ -35,6 +35,18 @@
             "placeholder_true": "true",
             "placeholder_false": "false"
           }
+        },
+        "fade_direction": {
+          "type": "Select",
+          "config": {
+            "label": "Fade Direction",
+            "placeholder": "",
+            "options": [
+              "Top",
+              "Middle",
+              "Bottom"
+            ]
+          }
         }
       },
       "items": {},

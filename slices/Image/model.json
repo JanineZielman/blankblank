@@ -27,6 +27,18 @@
             "placeholder_false": "false"
           }
         },
+        "fade_direction": {
+          "type": "Select",
+          "config": {
+            "label": "Fade Direction",
+            "placeholder": "",
+            "options": [
+              "Top",
+              "Middle",
+              "Bottom"
+            ]
+          }
+        },
         "columns": {
           "type": "Select",
           "config": {

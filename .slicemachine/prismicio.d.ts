@@ -318,6 +318,16 @@ interface ImageSliceDefaultPrimary {
      */
     fade: prismicT.BooleanField;
     /**
+     * Fade Direction field in *Image → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image.primary.fade_direction
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    fade_direction: prismicT.SelectField<"Top" | "Middle" | "Bottom">;
+    /**
      * Columns field in *Image → Primary*
      *
      * - **Field Type**: Select
@@ -423,6 +433,16 @@ interface TextSliceDefaultPrimary {
      *
      */
     fade: prismicT.BooleanField;
+    /**
+     * Fade Direction field in *Text → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text.primary.fade_direction
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    fade_direction: prismicT.SelectField<"Top" | "Middle" | "Bottom">;
 }
 /**
  * Default variation for Text Slice
