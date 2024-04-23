@@ -1,6 +1,6 @@
 import * as prismicH from "@prismicio/helpers";
 import { PrismicRichText } from "@prismicio/react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Text = ({ slice }) => {
   let fade = slice.primary.fade
