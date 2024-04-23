@@ -12,7 +12,7 @@ const Image = ({ slice }) => {
   return(
     <>
     {fade ?
-      <section className={`images-section columns-${slice.primary.columns}`} style={{'paddingTop': '200px', 'paddingBottom': '200px', 'background': `linear-gradient(0deg, rgba(255,255,255,0) 0%, ${slice.primary.background_color} 20%, ${slice.primary.background_color} 80%, rgba(255,255,255,0) 100%)`}}>
+      <section className={`images-section columns-${slice.primary.columns}`} style={{'background': `linear-gradient(0deg, rgba(255,255,255,0) 0%, ${slice.primary.background_color} 20%, ${slice.primary.background_color} 80%, rgba(255,255,255,0) 100%)`}}>
         {slice.items.map((item,i) => {
           return(
             <div className={`image ${item.size}`} key={`image${i}`}>
