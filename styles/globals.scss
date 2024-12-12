@@ -118,22 +118,32 @@ $marginL: 10vw;
 }
 
 .drag-container{
-  width: 100vw;
-  height: 100vh;
+  width: 110vw;
+  height: 110vh;
+  margin-top: -10vh;
+  margin-left: -10vh;
   position: fixed;
   overflow: hidden;
+  z-index: -1;
 }
 
 .drag{
-  height: 20vw;
+  height: 30vw;
   width: auto;
   position: absolute;
+  &:hover{
+    z-index: 9999!important;
+  }
   a{
     color: black;
   }
   img{
     width: auto;
     height: 100%;
+    mix-blend-mode: difference;
+    &:hover{
+      mix-blend-mode: normal;
+    }
   }
   &.left_top{
     left: 0;
