@@ -2,18 +2,30 @@
 
 body{
   font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 500;
   margin: 0;
   padding: 0;
 }
 
 $h1: 48px;
 $h2: 36px;
-$h3: 24px;
-$p: 18px;
+$h3: 28px;
+$p: 24px;
 $marginL: 10vw;
+
+p{
+  line-height: 1.4;
+}
 
 *{
   box-sizing: border-box;
+}
+
+.logo-text a, p a, .links a{
+  transition: filter 0.4s ease;
+  &:hover{
+    filter: blur(5px);
+  }
 }
 
 .header{
@@ -131,6 +143,7 @@ $marginL: 10vw;
   height: 30vw;
   width: auto;
   position: absolute;
+  transition: all 0.4s ease;
   &:hover{
     z-index: 9999!important;
   }
@@ -143,6 +156,7 @@ $marginL: 10vw;
     mix-blend-mode: difference;
     &:hover{
       mix-blend-mode: normal;
+      transform: rotateZ('90deg')
     }
   }
   &.left_top{
