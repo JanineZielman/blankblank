@@ -65,8 +65,8 @@ p{
 
 .project-title{
   position: fixed;
+  left: 14px;
   bottom: 14px;
-  right: 14px;
   font-size: $h3;
 }
 
@@ -144,7 +144,7 @@ p{
     height:20vw;
   }
   &.big{
-    height: 40vw;
+    height: 50vw;
     z-index: 999;
   }
   height: 30vw;
@@ -191,14 +191,13 @@ p{
   p{
     position: fixed;
     bottom: 14px;
-    right: 14px;
+    left: 14px;
     visibility: hidden;
     opacity: 0;
     transition: all 0.4s ease;
     font-size: 28px;
     margin: 0;
     max-width: 50%;
-    text-align: right;
   }
   &:hover{
     p{
@@ -210,10 +209,10 @@ p{
 
 .footer{
   padding: 0 1vw;
-  display: flex;
-  justify-content: space-between;
   position: fixed;
   bottom: 0;
+  right: 0;
+  text-align: right;
   width: 50%;
   font-size: $h3;
   p{
@@ -234,6 +233,17 @@ p{
     text-decoration: none;
     color: black;
     border-bottom: 1px solid black;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  p{
+    margin: 0;
+    font-size: 20px;
+  }
+  .info{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
   }
 }

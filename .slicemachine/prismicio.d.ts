@@ -215,6 +215,28 @@ interface ProjectDocumentData {
      */
     background_color: prismicT.ColorField;
     /**
+     * Year field in *Project*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: project.year
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    year: prismicT.NumberField;
+    /**
+     * Author / Client field in *Project*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: project.author_client
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    author_client: prismicT.KeyTextField;
+    /**
      * Slice Zone field in *Project*
      *
      * - **Field Type**: Slice Zone

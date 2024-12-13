@@ -28,6 +28,20 @@
           "placeholder": ""
         }
       },
+      "year": {
+        "type": "Number",
+        "config": {
+          "label": "Year",
+          "placeholder": ""
+        }
+      },
+      "author_client": {
+        "type": "Text",
+        "config": {
+          "label": "Author / Client",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

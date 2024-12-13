@@ -21,9 +21,17 @@ const Index = ({ navigation, settings, page, projects }) => {
       <div className="list">
         {projects.map((item,i) => {
           return(
-            <a href={item.url} key={`link${i}`}>
-              <PrismicRichText field={item.data.title}/>
-            </a>
+            <>
+            {item.data.title[0].text &&
+              <a href={item.url} key={`link${i}`}>
+                <PrismicRichText field={item.data.title}/>
+                <div className="info">
+                  <p>{item.data.author_client}</p>
+                  <p>{item.data.year}</p>
+                </div>
+              </a>
+            }
+            </>
           )
         })}
       </div>
