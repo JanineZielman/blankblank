@@ -76,6 +76,30 @@ export interface HomepageDocumentDataProjectItem {
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
+/** Content for Index documents */
+interface IndexDocumentData {
+    /**
+     * Title field in *Index*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: index.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+}
+/**
+ * Index document from Prismic
+ *
+ * - **API ID**: `index`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type IndexDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<IndexDocumentData>, "index", Lang>;
 /** Content for Navigation documents */
 interface NavigationDocumentData {
     /**
@@ -290,7 +314,7 @@ export interface SettingsDocumentDataFooterItem {
  * @typeParam Lang - Language API ID of the document.
  */
 export type SettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<SettingsDocumentData>, "settings", Lang>;
-export type AllDocumentTypes = HomepageDocument | NavigationDocument | PageDocument | ProjectDocument | SettingsDocument;
+export type AllDocumentTypes = HomepageDocument | IndexDocument | NavigationDocument | PageDocument | ProjectDocument | SettingsDocument;
 /**
  * Primary content in Image → Primary
  *
@@ -472,6 +496,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataProjectItem, HomepageDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, ProjectDocumentData, ProjectDocumentDataSlicesSlice, ProjectDocument, SettingsDocumentData, SettingsDocumentDataFooterItem, SettingsDocument, AllDocumentTypes, ImageSliceDefaultPrimary, ImageSliceDefaultItem, ImageSliceDefault, ImageSliceVariation, ImageSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataProjectItem, HomepageDocument, IndexDocumentData, IndexDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, ProjectDocumentData, ProjectDocumentDataSlicesSlice, ProjectDocument, SettingsDocumentData, SettingsDocumentDataFooterItem, SettingsDocument, AllDocumentTypes, ImageSliceDefaultPrimary, ImageSliceDefaultItem, ImageSliceDefault, ImageSliceVariation, ImageSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }

@@ -4,8 +4,8 @@ import { PrismicNextImage } from "@prismicio/next";
 import * as prismicH from "@prismicio/helpers";
 import React, {useEffect} from "react";
 
-import { createClient } from "../../prismicio";
-import { Layout } from "../../components/Layout";
+import { createClient } from "../prismicio";
+import { Layout } from "../components/Layout";
 
 
 const Index = ({ navigation, settings, page, projects }) => {
@@ -36,7 +36,7 @@ export default Index;
 export async function getStaticProps({ previewData }) {
   const client = createClient({ previewData });
 
-  const page = await client.getByUID("page", "index-all");
+  const page = await client.getSingle("index");
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
 
