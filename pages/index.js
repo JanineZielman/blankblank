@@ -15,7 +15,6 @@ const Index = ({ navigation, settings, home }) => {
       for (let i = 0; i < dragItems.length; i++) { 
         var random1 = Math.floor(Math.random() * 20);
         var random2 = Math.floor(Math.random() * 20);
-        $( `#drag${i}` ).draggable();
         document.getElementById(`drag${i}`).style.marginLeft = random1 + 'vw'
         document.getElementById(`drag${i}`).style.marginTop = random2 + 'vh'
       }
@@ -32,8 +31,9 @@ const Index = ({ navigation, settings, home }) => {
       <div className="container">
         <div className="drag-container">
           {home.data.project.map((item, i) => {
+            console.log(item.title)
             return(
-              <div className={`drag ${item.position}`} id={`drag${i}`} key={`drag${i}`}>
+              <div className={`drag ${item.position} ${item.title.length > 0 ? 'small' : 'big'}`} id={`drag${i}`} key={`drag${i}`}>
                 <PrismicLink field={item.link}>
                   <PrismicNextImage field={item.image}/>
                   <PrismicRichText field={item.title}/>

@@ -65,8 +65,8 @@ p{
 
 .project-title{
   position: fixed;
-  top: 1vw;
-  left: 300px;
+  bottom: 14px;
+  right: 14px;
   font-size: $h3;
 }
 
@@ -140,6 +140,13 @@ p{
 }
 
 .drag{
+  &.small{
+    height:20vw;
+  }
+  &.big{
+    height: 40vw;
+    z-index: 999;
+  }
   height: 30vw;
   width: auto;
   position: absolute;
@@ -183,11 +190,15 @@ p{
   }
   p{
     position: fixed;
-    bottom: 48px;
-    left: 1%;
+    bottom: 14px;
+    right: 14px;
     visibility: hidden;
     opacity: 0;
     transition: all 0.4s ease;
+    font-size: 28px;
+    margin: 0;
+    max-width: 50%;
+    text-align: right;
   }
   &:hover{
     p{
@@ -203,7 +214,7 @@ p{
   justify-content: space-between;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 50%;
   font-size: $h3;
   p{
     margin: 14px 0;
